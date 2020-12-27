@@ -16,6 +16,10 @@ const Game = ({ game, className }) => {
       <div className={className}>
         <h2>{game.title}</h2>
 
+        <p>{game.description}</p>
+
+        <hr />
+
         {game.localPlayers !== null && (
           <p>
             Paikallinen moninpeli: {game.localPlayers.min} -{' '}
@@ -69,6 +73,12 @@ export default styled(Game)`
   height: 100%;
   color: ${({ theme }) => theme.palette.typography.light};
   text-align: left;
+
+  hr {
+    color: #ffffff33;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
   p,
   h2,
