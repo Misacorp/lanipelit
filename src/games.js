@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-export default [
+export const lol = [
   {
     title: 'Deep Rock Galactic',
     description:
@@ -7,6 +7,7 @@ export default [
     tags: ['fps', 'rpg', 'co-op', 'pve'],
     platforms: ['Steam', 'Windows Store', 'Xbox'],
     crossPlayPlatforms: ['Windows Store', 'Xbox'],
+    gamePassPlatforms: ['Windows Store', 'Xbox', 'Android'],
     url: 'https://www.microsoft.com/fi-fi/p/deep-rock-galactic/9nhfvwx1v7qj',
     imageUrl:
       'https://cdn.cloudflare.steamstatic.com/steam/apps/548430/capsule_616x353.jpg',
@@ -27,6 +28,7 @@ export default [
     tags: ['fps', 'co-op', 'pvp', 'pve'],
     platforms: ['Steam', 'Windows Store', 'Xbox'],
     crossPlayPlatforms: ['Steam', 'Windows Store', 'Xbox'],
+    gamePassPlatforms: ['Windows Store', 'Xbox', 'Android'],
     url: 'https://www.microsoft.com/fi-fi/p/sea-of-thieves/9p2n57mc619k',
     imageUrl:
       'https://i2.wp.com/caniplaythat.com/wp-content/uploads/2020/06/sea-of-thieves-key-art.jpg?fit=1920%2C1080&ssl=1',
@@ -39,5 +41,211 @@ export default [
         author: 'Misa',
       },
     ],
+  },
+];
+
+export default [
+  {
+    title: 'Halo: Master Chief Collection',
+    description:
+      'Legendaariset Halot yhdessä paketissa. Suojele ihmiskuntaa muukalaisilta, pelasta galaksi ja ota mittaa muista pelaajista äärimmäisen monipuolisessa moninpelissä.',
+    tags: ['fps', 'pve', 'pvp', 'co-op'],
+    url:
+      'https://www.microsoft.com/fi-fi/p/halo-the-master-chief-collection/9ntm9hxnlszx',
+    imageUrl:
+      'https://images.gamewatcherstatic.com/image/file/7/c5/104957/Halo-Reach-2.jpg',
+    platforms: ['Xbox', 'Windows Store', 'Steam'],
+    crossPlayPlatforms: ['Xbox', 'Windows Store', 'Steam'],
+    gamePassPlatforms: ['Xbox', 'PC', 'Android Pilvi'],
+    recommendations: [
+      {
+        author: 'Misa',
+        content:
+          'Mistään pelistä ei löydy näin montaa pelimuotoa! Kuuden pelin kampanjat, kahden pelin Firefightit ja viiden pelin moninpelit kaikki samassa paketissa. Pelaa lipunryöstöä, Grifballia, King of the Hillia, rallia ja ties mitä muuta jopa 16 pelaajan voimin.',
+      },
+    ],
+    localPlayers: { min: 1, max: 4 },
+    onlinePlayers: { max: 16 },
+  },
+  {
+    title: 'Factorio',
+    description:
+      'Rakenna raketti, mutta automatisoi se! Kasvata tehdastasi samalla kun puolustat sitä muukalaisilta. Moninpelissä on mahdollisuus pelata myös tiimeissä ja halutessa sotia toisia vastaan samalla.',
+    tags: ['pve', 'pvp', 'co-op'],
+    url: 'https://store.steampowered.com/app/427520/Factorio/',
+    imageUrl:
+      'https://cdn.pastemagazine.com/www/articles/Factorio%20Main%20Image.jpg',
+    platforms: ['Steam', 'Muu PC'],
+    crossPlayPlatforms: ['Steam', 'Muu PC'],
+    recommendations: [
+      {
+        author: 'Misa',
+        content:
+          'Pelottavan koukuttava peli, joka tarjoaa miellyttävää haastetta tehdastuotannon suunnittelussa, selviytymisessä ja kommunikaatiossa tiimikavereiden kanssa. Tässä etenee jatkuvasti ja sen kyllä tuntee, kun ei halua lopettaa!',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { max: 64 },
+  },
+  {
+    title: 'Destiny 2',
+    description:
+      'Avaruusfantasia looter-shooter. Customoitava pvp max 12 pelaajalle. Kuuden pelaajan raidit ovat tämän pelin parasta antia.',
+    tags: ['fps', 'rpg', 'pve', 'pvp', 'f2p'],
+    url: 'https://store.steampowered.com/app/1085660/Destiny_2/',
+    imageUrl:
+      'https://image.api.playstation.com/vulcan/img/rnd/202008/2202/ejlsloEwJnz6yceBnWmFkYVe.JPG',
+    platforms: ['Xbox', 'Steam'],
+    gamePassPlatforms: ['Xbox'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          'Halo-sarjan luojan Bungien mestariteos. Gunplay on tässä pelissä tarkka ja täsmällinen eli ampumasi laukaukset osuvat silloin kun sinusta tuntuu, että nyt osuu. Toiminta on virtaviivaista ja Destiny 2 tarjoaa erityisesti pve puolella syvyyttä haastavien raidien muodossa. Itse ollut tähän pelisarjaan koukussa jo vuosia.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { max: 12 },
+  },
+  {
+    title: 'Civilization VI',
+    description:
+      'Vuoropohjainen strategiapeli, jossa tullaan teknologiapuun mukana historian hämärästä aina tähän päivään ja hieman myös tulevaisuuteen. Moderni shakki!',
+    tags: ['pve', 'pvp', 'tbs'],
+    url:
+      'https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI/',
+    imageUrl: 'https://i.imgur.com/3Bpzb5I.jpg',
+    platforms: ['Xbox', 'Steam', 'Epic Store'],
+    crossPlayPlatforms: ['Steam', 'Epic Store'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          '"One more turn" -hokema pitää Civ VI kohdalla paikkansa. Ja Gandhi yllättää aina ydinpommilla juuri kun luulit, että olette parhaat ystävät. Heksoista rakentuva maailma antaa strategisia ja taktisia haasteita ja mahdollisuuksia. Peliin sisältyvät pelimuodot Red Death (Battle Royal) ja Pirates ovat ehdottomasti pelaamisen arvoisia pieniä 30-60 min moninpelituokioita.',
+      },
+    ],
+    localPlayers: { min: 1, max: 8 },
+    onlinePlayers: { max: 16 },
+  },
+  {
+    title: 'Minecraft',
+    description:
+      'Kaivetaan ja hakataan palikoita, joista sitten rakennellaan koteja ja linnoja ym. mukavaa, ennen kuin tapetaan lohikäärme ja sitten peli on ohi... ',
+    tags: ['pve', 'pvp', 'co-op'],
+    url:
+      'https://www.microsoft.com/fi-fi/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab',
+    imageUrl:
+      'https://play-lh.googleusercontent.com/bW71VrpnDqzGg0HS-_E-LPFFYggr7Ui47c9uNHgLT8D2E1TZq7Gm7Evj8VYJ8rQOafc',
+    platforms: ['Xbox', 'Windows Store', 'Play Store'],
+    crossPlayPlatforms: ['Xbox', 'Windows Store', 'Play Store'],
+    gamePassPlatforms: ['Xbox', 'PC'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          'Mielikuvituksella ei ole rajoja, sillä Minecraftisa voi tehdä eri värisistä kuutioista mitä vain ja kuolla monta kertaa pudotessaan korkealta rakennelmiaan rakentaessa. Ja kuulemma peliä voi pelata vielä lohikäärmeen päihittämisen jälkeenkin - huhujen mukaan tämä avaa mahdollisuuden jopa lentämiseen!!!',
+      },
+    ],
+    localPlayers: { min: 1, max: 2 },
+    onlinePlayers: { max: 8 },
+  },
+  {
+    title: 'Among Us',
+    description:
+      'Miehistö yrittää korjata kaiken päästäkseen kotiin samalla, kun heidän sekaan soluttautuneet avaruusolennot pyrkivät tappamaan kaikki jäämättä kiinni. Sosiaalista päättelyä ja salapoliisityötä.',
+    tags: ['pvp', 'co-op', 'f2p'],
+    url:
+      'https://play.google.com/store/apps/details?id=com.innersloth.spacemafia',
+    imageUrl:
+      'https://cdn.cloudflare.steamstatic.com/steam/apps/945360/ss_a0f2416e11bf5b47788eaa3617e092b73962b145.1920x1080.jpg?t=1607727748',
+    platforms: ['Steam', 'Play Store', 'Apple App Store'],
+    crossPlayPlatforms: ['Steam', 'Play Store', 'Apple App Store'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          'Matala aloituskynnys ja hauskaa ajanvietettä porukalla yrittää pähkäillä, kuka meidän joukossa on murhaaja. Nimen omaan parhaimmillaan tutulla porukalla.\n\nIlmainen pelata mobiililaitteilla. Discordin käyttö on erittäin suositeltavaa. Steam versioon saatavilla myös reippaasti erilaisia modausmahdollisuuksia.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { max: 10 },
+  },
+  {
+    title: 'Of Guards and Thieves',
+    description:
+      'Ylhäältä päin kuvattua 2D-hiippailuräiskintää. Poliisit vs. varkaat. Paljon erilaisia fps-genren pelimuotoja.',
+    tags: ['pvp', 'co-op', 'f2p'],
+    url: 'https://store.steampowered.com/app/302590/Of_Guards_And_Thieves/',
+    imageUrl: 'https://i.ytimg.com/vi/R_D9kaDXotI/maxresdefault.jpg',
+    platforms: ['Steam'],
+    crossPlayPlatforms: ['Steam'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          'Sopivan letkeää ja nopeatempoista kissa-hiiri leikkiä. Ei tarvitse aina pelata hampaat irvessä ja rystyset valkoisina. Varjoissa hiippailu ja poliisien katseiden pakoilu on vaan yksinkertaisesti hauskaa myös virtuaalimaailmassa.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { max: 16 },
+  },
+  {
+    title: 'Project Winter',
+    description:
+      'Taistelu selviytymisestä hyytävää talvista luontoa ja ryhmään pesiytyneitä pettureita vastaan. Käyttää proximity chatia.',
+    tags: ['pve', 'pvp', 'co-op'],
+    url: 'https://store.steampowered.com/app/774861/Project_Winter/',
+    imageUrl:
+      'https://cdn.cloudflare.steamstatic.com/steam/apps/774861/capsule_616x353.jpg?t=1608139018',
+    platforms: ['Steam'],
+    crossPlayPlatforms: ['Steam'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          'Social deduction/deception pelien toiminnallisemmasta päästä. Talvea (kylmyyttä ja aikaa) vastaan täytyy oikeasti taistella ja resurssien hankkiminen ja suojeleminen on tärkeää. Ampuma aseet ovat harvinaisia ja usein kirves toimii niitä paremmin. Metsän pedot ovat vaarallisia ja kaikkein vaarallisin on vierellä kulkeva kaveri, joka voi minä hetkenä hyvänsä iskeä kirveen selkääsi. Ja toivot vain, että joku kuulisi viimeiset avunhuutosi.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { max: 8 },
+  },
+  {
+    title: 'Age of Empires II',
+    description:
+      'Kenties kaikkein perinteisin real-time-strategy. Ensin kerätään resursseja, rakennetaan rakennuksia, koulutettaan sotajoukkoja ja sitten soditaan maailmassa. Paras multitaskaaja voittaa.',
+    tags: ['pvp', 'rts'],
+    url:
+      'https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition/',
+    platforms: ['Windows Store', 'Steam'],
+    gamePassPlatforms: ['PC'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          'Ihan ok mättöä. Taitotasokäyrä on jyrkkä ja kokeneempi pelaaja pyörittelee puolen tusinaa vasta-alkajia ilman että tulee edes hiki, mikä voi vaikeuttaa tasaisten pelien aikaansaamista. \n\nPelistä on pari versioita HD ja DE. Eivät välttämättä toimi ristiin keskenään.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { max: 8 },
+  },
+  {
+    title: 'Jackbox Party Pack',
+    description:
+      'Erilaisia seurapelejä (piirtelyä, sana-arvailua, yms.) useammassa paketissa. Pelaaminen tapahtuu puhelimella.',
+    tags: ['co-op', 'f2p'],
+    url: 'jackbox.tv',
+    imageUrl:
+      'https://store-images.s-microsoft.com/image/apps.39588.70837386162618613.c0d4e328-f426-4e66-9d62-c92e9dd38d8f.d71c6ab6-0d2e-4253-9570-49fefcbfdacc?mode=scale&q=90&h=1080&w=1920&background=%23FFFFFF',
+    platforms: ['Steam', 'Selain'],
+    crossPlayPlatforms: ['Steam', 'Selain'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          'Useimmissa Jackbox Party Packien peleistä pääsee nauramaan ja käyttämään luovuuttaan. Hyvä seura on pelatessa tärkeintä.',
+      },
+    ],
+    localPlayers: { min: 4, max: 10 },
+    onlinePlayers: { max: 10 },
   },
 ];

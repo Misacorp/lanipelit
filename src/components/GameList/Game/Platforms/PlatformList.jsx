@@ -19,7 +19,9 @@ const translateType = type => {
  */
 const PlatformListStructure = ({ type, game, className }) => {
   const platforms =
-    type === 'AVAILABLE' ? game.platforms : game.crossPlayPlatforms;
+    type === 'AVAILABLE' ? game?.platforms : game?.crossPlayPlatforms;
+
+  if (!platforms) return null;
 
   return (
     <div className={className}>

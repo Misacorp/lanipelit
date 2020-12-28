@@ -1,13 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { Menu, MenuTrigger, ActionButton, Item } from '@adobe/react-spectrum';
 
 import GameList from './GameList/GameList';
 
 import gamesRaw from '../games';
 import Game from '../types/Game';
-
-const DEFAULT_SELECT_VALUE = '';
 
 const games = gamesRaw.map(g => new Game(g));
 
@@ -18,14 +17,11 @@ const MainStructure = ({ className }) => {
     games.forEach(game => {
       game.recommendations.forEach(rec => authorSet.add(rec.author));
     });
-    return Array.from(authorSet);
+    return Array.from(authorSet).map(name => ({ name }));
   }, []);
 
   // Author state
-  const [selectedAuthor, selectAuthor] = useState('');
-  const handleAuthorChange = a => {
-    selectAuthor(a.target.value);
-  };
+  const [selectedAuthors, setSelectedAuthors] = useState(new Set());
 
   // Get all tag values
   const tags = useMemo(() => {
@@ -33,31 +29,39 @@ const MainStructure = ({ className }) => {
     games.forEach(game => {
       game.tags.forEach(tag => tagSet.add(tag));
     });
-    return Array.from(tagSet);
+    return Array.from(tagSet).map(name => ({ name }));
   }, []);
 
   // Tag state
-  const [selectedTag, setSelectedTag] = useState('');
-  const handleTagChange = a => {
-    setSelectedTag(a.target.value);
-  };
+  const [selectedTags, setSelectedTags] = useState(new Set());
 
   // Filter games by selected author
   let sortedGames = games;
   sortedGames = sortedGames.filter(game => {
     const recommenders = game.recommendations.map(rec => rec.author);
-    return (
-      recommenders.includes(selectedAuthor) ||
-      selectedAuthor === DEFAULT_SELECT_VALUE
+
+    if (selectedAuthors.size === 0) {
+      // No author selection - no filtering!
+      return true;
+    }
+
+    // The game must have recommendations from ANY selected authors
+    return Array.from(selectedAuthors).some(author =>
+      recommenders.includes(author),
     );
   });
 
   // Filter games by selected tag
   sortedGames = sortedGames.filter(game => {
     const { tags: gameTags } = game;
-    return (
-      gameTags.includes(selectedTag) || selectedTag === DEFAULT_SELECT_VALUE
-    );
+
+    if (selectedTags.size === 0) {
+      // No tag selection - no filtering!
+      return true;
+    }
+
+    // The game must have all selected tags
+    return Array.from(selectedTags).every(tag => gameTags.includes(tag));
   });
 
   // Sort games alphabetically
@@ -72,23 +76,31 @@ const MainStructure = ({ className }) => {
       <h1>Lanipelit</h1>
       <p>Selaa laneilla pelattavaksi ehdotettuja pelejä ja löydä suosikkisi!</p>
 
-      <select id="tag-select" onChange={handleTagChange}>
-        <option value={DEFAULT_SELECT_VALUE}>Kaikki tagit</option>
-        {tags.map(tag => (
-          <option value={tag} key={tag}>
-            {tag}
-          </option>
-        ))}
-      </select>
+      <MenuTrigger closeOnSelect={false}>
+        <ActionButton>Tagit</ActionButton>
+        <Menu
+          selectionMode="multiple"
+          selectedKeys={selectedTags}
+          onSelectionChange={setSelectedTags}
+        >
+          {tags.map(tag => (
+            <Item key={tag.name}>{tag.name}</Item>
+          ))}
+        </Menu>
+      </MenuTrigger>
 
-      <select id="author-select" onChange={handleAuthorChange}>
-        <option value={DEFAULT_SELECT_VALUE}>Kaikki suosittelijat</option>
-        {authors.map(author => (
-          <option value={author} key={author}>
-            {author}
-          </option>
-        ))}
-      </select>
+      <MenuTrigger closeOnSelect={false}>
+        <ActionButton>Suosittelijat</ActionButton>
+        <Menu
+          selectionMode="multiple"
+          selectedKeys={selectedAuthors}
+          onSelectionChange={setSelectedAuthors}
+        >
+          {authors.map(author => (
+            <Item key={author.name}>{author.name}</Item>
+          ))}
+        </Menu>
+      </MenuTrigger>
 
       <GameList games={sortedGames} />
     </div>

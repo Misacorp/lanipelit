@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider, defaultTheme } from '@adobe/react-spectrum';
 import WebFont from 'webfontloader';
 
 import { ThemeProvider } from 'styled-components';
@@ -18,17 +19,19 @@ WebFont.load({
 
 const App = function AppContent() {
   return (
-    <ThemeProvider theme={theme}>
-      <>
-        <GlobalStyles />
+    <Provider theme={defaultTheme}>
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
 
-        <Router>
-          <Switch>
-            <Route path={routes.ROOT} component={Main} />
-          </Switch>
-        </Router>
-      </>
-    </ThemeProvider>
+          <Router>
+            <Switch>
+              <Route path={routes.ROOT} component={Main} />
+            </Switch>
+          </Router>
+        </>
+      </ThemeProvider>
+    </Provider>
   );
 };
 
