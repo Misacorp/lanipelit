@@ -34,7 +34,7 @@
   },
   "overrides": [
     {
-      "files": ["src/**/*.js", "src/index.jsx"],
+      "files": ["src/**/*.js", "src/index.jsx", "src/store/useStore.jsx"],
       "rules": {
         "filenames/match-regex": [2, "^[a-z]+[A-z]*", true]
       }

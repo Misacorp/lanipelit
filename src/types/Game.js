@@ -8,6 +8,7 @@ class Game {
     this.tags = props.tags;
     this.platforms = props.platforms;
     this.crossPlayPlatforms = props.crossPlayPlatforms;
+    this.gamePassPlatforms = props.gamePassPlatforms;
 
     this.url = props.url;
     this.imageUrl = props.imageUrl;
@@ -17,9 +18,9 @@ class Game {
       ? new PlayerCounts(props.localPlayers)
       : null;
 
-    this.recommendations = props.recommendations.map(
-      r => new Recommendation(r),
-    );
+    this.recommendations = props.recommendations
+      .map(r => new Recommendation(r))
+      .filter(r => !r.isEmpty());
   }
 }
 

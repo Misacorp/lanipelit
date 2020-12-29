@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import theme from './styles/theme';
 import * as routes from './constants/routes';
-
+import { StoreContextProvider } from './store/useStore';
 /* Don't fear the wrappers! Start editing your home page in the Main component. */
 import Main from './components/Main';
 
@@ -19,19 +19,21 @@ WebFont.load({
 
 const App = function AppContent() {
   return (
-    <Provider theme={defaultTheme}>
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
+    <StoreContextProvider>
+      <Provider theme={defaultTheme}>
+        <ThemeProvider theme={theme}>
+          <>
+            <GlobalStyles />
 
-          <Router>
-            <Switch>
-              <Route path={routes.ROOT} component={Main} />
-            </Switch>
-          </Router>
-        </>
-      </ThemeProvider>
-    </Provider>
+            <Router>
+              <Switch>
+                <Route path={routes.ROOT} component={Main} />
+              </Switch>
+            </Router>
+          </>
+        </ThemeProvider>
+      </Provider>
+    </StoreContextProvider>
   );
 };
 

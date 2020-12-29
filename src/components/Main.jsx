@@ -7,15 +7,27 @@ import GameList from './GameList/GameList';
 
 import gamesRaw from '../games';
 import Game from '../types/Game';
+import useStore from '../store/useStore';
+import * as gameListViewModes from '../constants/gameListViewModes';
 
 const games = gamesRaw.map(g => new Game(g));
 
+/**
+ * Main app content
+ * @param className
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const MainStructure = ({ className }) => {
   // Get all author values.
   const authors = useMemo(() => {
     const authorSet = new Set();
     games.forEach(game => {
-      game.recommendations.forEach(rec => authorSet.add(rec.author));
+      game.recommendations.forEach(rec => {
+        if (rec.author) {
+          authorSet.add(rec.author);
+        }
+      });
     });
     return Array.from(authorSet).map(name => ({ name }));
   }, []);
@@ -71,13 +83,34 @@ const MainStructure = ({ className }) => {
     return 0;
   });
 
+  const { gameListView, setGameListView } = useStore();
+  const viewOptions = [
+    { name: 'Suuret kortit', value: gameListViewModes.LARGE },
+    { name: 'Pienet kortit', value: gameListViewModes.SMALL },
+  ];
+
   return (
     <div className={className}>
       <h1>Lanipelit</h1>
       <p>Selaa laneilla pelattavaksi ehdotettuja pelejä ja löydä suosikkisi!</p>
 
+      <MenuTrigger closeOnSelect>
+        <ActionButton>
+          {viewOptions.find(o => o.value === gameListView).name}
+        </ActionButton>
+        <Menu onAction={setGameListView}>
+          {viewOptions.map(viewMode => (
+            <Item key={viewMode.value}>{viewMode.name}</Item>
+          ))}
+        </Menu>
+      </MenuTrigger>
+
       <MenuTrigger closeOnSelect={false}>
-        <ActionButton>Tagit</ActionButton>
+        <ActionButton>
+          {selectedTags.size === 0
+            ? 'Tagit'
+            : Array.from(selectedTags).join(', ')}
+        </ActionButton>
         <Menu
           selectionMode="multiple"
           selectedKeys={selectedTags}
@@ -90,8 +123,13 @@ const MainStructure = ({ className }) => {
       </MenuTrigger>
 
       <MenuTrigger closeOnSelect={false}>
-        <ActionButton>Suosittelijat</ActionButton>
+        <ActionButton>
+          {selectedAuthors.size === 0
+            ? 'Suosittelijat'
+            : Array.from(selectedAuthors).join(', ')}
+        </ActionButton>
         <Menu
+          title="Lol"
           selectionMode="multiple"
           selectedKeys={selectedAuthors}
           onSelectionChange={setSelectedAuthors}
@@ -113,8 +151,8 @@ const Main = styled(MainStructure)`
 
   h1 {
     margin: 1rem;
-    margin-top: 1.5rem;
-    padding: 0;
+    margin-top: 0;
+    padding: 1.5rem 0 0;
   }
 
   select {

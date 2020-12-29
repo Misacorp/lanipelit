@@ -7,10 +7,19 @@ import GameImage from './GameImage';
 import Recommendation from './Recommendation/Recommendation';
 import Platforms from './Platforms/Platforms';
 import TagList from './TagList';
+import SmallGame from './SmallGame/SmallGame';
 
 import GameObject from '../../../types/Game';
+import useStore from '../../../store/useStore';
+import * as gameListViewModes from '../../../constants/gameListViewModes';
 
 const Game = ({ game, className }) => {
+  const { gameListView } = useStore();
+
+  if (gameListView === gameListViewModes.SMALL) {
+    return <SmallGame game={game} />;
+  }
+
   return (
     <GameWrapper>
       <div className={className}>
@@ -21,16 +30,11 @@ const Game = ({ game, className }) => {
         <hr />
 
         {game.localPlayers !== null && (
-          <p>
-            Paikallinen moninpeli: {game.localPlayers.min} -{' '}
-            {game.localPlayers.max}
-          </p>
+          <p>Paikallinen moninpeli: {game.localPlayers.toString()}</p>
         )}
 
         {game.onlinePlayers !== null && (
-          <p>
-            Verkkomoninpeli: {game.onlinePlayers.min} - {game.onlinePlayers.max}
-          </p>
+          <p>Verkkomoninpeli: {game.onlinePlayers.toString()}</p>
         )}
 
         <TagList game={game} />
@@ -65,30 +69,26 @@ export default styled(Game)`
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.15)
   );
-  color: #000;
-  border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-bottom: 0.5rem;
-  border: 2px solid rgba(255, 220, 150, 0.3);
+
   height: 100%;
-  color: ${({ theme }) => theme.palette.typography.light};
+  color: ${({ theme }) => theme.palette.typography.dark};
   text-align: left;
+  background-color: ${({ theme }) => theme.palette.primary.lightest};
+
+  border-style: solid;
+  border-right-width: 7px;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-right-color: #ffc600;
 
   hr {
     color: #ffffff33;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  p,
-  h2,
-  h3,
-  h4,
-  a,
-  span,
-  ul {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
   p.online,
@@ -120,6 +120,7 @@ export default styled(Game)`
   a:active,
   a:hover,
   a:focus {
-    color: ${({ theme }) => theme.palette.primary.lighter};
+    color: ${({ theme }) => theme.palette.tertiary.dark};
+    font-size: 1.4em;
   }
 `;

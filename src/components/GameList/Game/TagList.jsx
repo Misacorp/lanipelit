@@ -13,8 +13,11 @@ const TagListStructure = ({ game, className }) => {
     <div className={className}>
       <h3>Tagit</h3>
       <ul>
-        {game.tags.map(t => (
-          <li key={t}>{t}</li>
+        {game.tags.map((t, index) => (
+          <li key={t}>
+            {t}
+            {index !== game.tags.length - 1 ? ', ' : ''}
+          </li>
         ))}
       </ul>
     </div>
@@ -24,14 +27,11 @@ const TagListStructure = ({ game, className }) => {
 const TagList = styled(TagListStructure)`
   ul {
     list-style-type: none;
+    padding: 0;
 
     li {
       display: inline;
       margin-right: 0.5rem;
-
-      ::after {
-        content: ',';
-      }
     }
   }
 `;

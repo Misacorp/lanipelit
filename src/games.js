@@ -1,48 +1,4 @@
 /* eslint-disable max-len */
-export const lol = [
-  {
-    title: 'Deep Rock Galactic',
-    description:
-      'Neljä avaruuskääpiötä porautuu kaivokseen kaivamaan mineraaleja, pelastamaan laitteistoa, varastamaan muukalaisten munia ja kaikkea muuta, mitä johto heidän päänsä menoksi keksii. Selviääkö ryhmä ulos kaivoksesta ennen kuin sen alkuasukkaat vievät heiltä hengen?',
-    tags: ['fps', 'rpg', 'co-op', 'pve'],
-    platforms: ['Steam', 'Windows Store', 'Xbox'],
-    crossPlayPlatforms: ['Windows Store', 'Xbox'],
-    gamePassPlatforms: ['Windows Store', 'Xbox', 'Android'],
-    url: 'https://www.microsoft.com/fi-fi/p/deep-rock-galactic/9nhfvwx1v7qj',
-    imageUrl:
-      'https://cdn.cloudflare.steamstatic.com/steam/apps/548430/capsule_616x353.jpg',
-    onlinePlayers: { min: 1, max: 4 },
-    localPlayers: { min: 1, max: 1 },
-    recommendations: [
-      {
-        content:
-          'Left 4 Dead tyylinen intensiivinen ja tiukkaa yhteistyötä vaativa mähinä, jossa vaikeustasoa säätämällä saa aina itselleen sopivaa haastetta.',
-        author: 'Misa',
-      },
-    ],
-  },
-  {
-    title: 'Sea of Thieves',
-    description:
-      'Valtava merirosvohiekkalaatikko, jossa purjehdit jopa neljän kaverin kanssa. Tarraa erilaisiin tehtäviin, maailman jännittäviin haasteisiin, ota mittaa muista pelaajista tai lähde ratkomaan muinaisia mysteerejä. Valinta on sinun!',
-    tags: ['fps', 'co-op', 'pvp', 'pve'],
-    platforms: ['Steam', 'Windows Store', 'Xbox'],
-    crossPlayPlatforms: ['Steam', 'Windows Store', 'Xbox'],
-    gamePassPlatforms: ['Windows Store', 'Xbox', 'Android'],
-    url: 'https://www.microsoft.com/fi-fi/p/sea-of-thieves/9p2n57mc619k',
-    imageUrl:
-      'https://i2.wp.com/caniplaythat.com/wp-content/uploads/2020/06/sea-of-thieves-key-art.jpg?fit=1920%2C1080&ssl=1',
-    onlinePlayers: { min: 1, max: 4 },
-    localPlayers: { min: 1, max: 1 },
-    recommendations: [
-      {
-        content:
-          'Monesti lähden merelle ajatuksena vain kalastaa hetki, mutta löydänkin itseni sukeltelemassa ties mistä salaisista vedenalaisista luolista kun purkautuva tulivuori iskee yllä tulikiveä niskaan. 5/5 banaanit syödään kuorineen',
-        author: 'Misa',
-      },
-    ],
-  },
-];
 
 export default [
   {
@@ -63,9 +19,14 @@ export default [
         content:
           'Mistään pelistä ei löydy näin montaa pelimuotoa! Kuuden pelin kampanjat, kahden pelin Firefightit ja viiden pelin moninpelit kaikki samassa paketissa. Pelaa lipunryöstöä, Grifballia, King of the Hillia, rallia ja ties mitä muuta jopa 16 pelaajan voimin.',
       },
+      {
+        author: 'Ossi',
+        content:
+          'Toimii kilpailullisena, hauskana hupsutteluna, isolla ja pienellä porukalla. Crossplay löytyy ja kuuluu Gamepassiin.',
+      },
     ],
     localPlayers: { min: 1, max: 4 },
-    onlinePlayers: { max: 16 },
+    onlinePlayers: { min: 1, max: 16 },
   },
   {
     title: 'Factorio',
@@ -85,7 +46,7 @@ export default [
       },
     ],
     localPlayers: { min: 1, max: 1 },
-    onlinePlayers: { max: 64 },
+    onlinePlayers: { min: 1, max: 64 },
   },
   {
     title: 'Destiny 2',
@@ -105,7 +66,7 @@ export default [
       },
     ],
     localPlayers: { min: 1, max: 1 },
-    onlinePlayers: { max: 12 },
+    onlinePlayers: { min: 1, max: 12 },
   },
   {
     title: 'Civilization VI',
@@ -125,7 +86,7 @@ export default [
       },
     ],
     localPlayers: { min: 1, max: 8 },
-    onlinePlayers: { max: 16 },
+    onlinePlayers: { min: 1, max: 16 },
   },
   {
     title: 'Minecraft',
@@ -147,7 +108,7 @@ export default [
       },
     ],
     localPlayers: { min: 1, max: 2 },
-    onlinePlayers: { max: 8 },
+    onlinePlayers: { min: 1, max: 8 },
   },
   {
     title: 'Among Us',
@@ -168,7 +129,7 @@ export default [
       },
     ],
     localPlayers: { min: 1, max: 1 },
-    onlinePlayers: { max: 10 },
+    onlinePlayers: { min: 5, max: 10 },
   },
   {
     title: 'Of Guards and Thieves',
@@ -187,7 +148,7 @@ export default [
       },
     ],
     localPlayers: { min: 1, max: 1 },
-    onlinePlayers: { max: 16 },
+    onlinePlayers: { min: 6, max: 16 },
   },
   {
     title: 'Project Winter',
@@ -207,7 +168,7 @@ export default [
       },
     ],
     localPlayers: { min: 1, max: 1 },
-    onlinePlayers: { max: 8 },
+    onlinePlayers: { min: 5, max: 8 },
   },
   {
     title: 'Age of Empires II',
@@ -226,7 +187,7 @@ export default [
       },
     ],
     localPlayers: { min: 1, max: 1 },
-    onlinePlayers: { max: 8 },
+    onlinePlayers: { min: 1, max: 8 },
   },
   {
     title: 'Jackbox Party Pack',
@@ -246,6 +207,62 @@ export default [
       },
     ],
     localPlayers: { min: 4, max: 10 },
-    onlinePlayers: { max: 10 },
+    onlinePlayers: { min: 4, max: 10 },
+  },
+  {
+    title: 'Team Fortress 2',
+    description:
+      'Class-pohjainen tiimipeli FPS, josta lötyy kaikille jotain. Helppo päästä mukaan, ja kukaan ei ole taistelukentällä täysin hyödytön.',
+    tags: ['fps', 'pvp', 'f2p'],
+    url: 'https://store.steampowered.com/app/440/Team_Fortress_2/',
+    imageUrl:
+      'https://steamcdn-a.akamaihd.net/steam/apps/440/header.jpg?t=1592263852',
+    platforms: ['Steam'],
+    crossPlayPlatforms: ['Steam'],
+    recommendations: [{}],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { min: 1, max: 32 },
+  },
+  {
+    title: 'Deep Rock Galactic',
+    description:
+      'Neljä avaruuskääpiötä porautuu kaivokseen kaivamaan mineraaleja, pelastamaan laitteistoa, varastamaan muukalaisten munia ja kaikkea muuta, mitä johto heidän päänsä menoksi keksii. Selviääkö ryhmä ulos kaivoksesta ennen kuin sen alkuasukkaat vievät heiltä hengen?',
+    tags: ['fps', 'rpg', 'pve', 'co-op'],
+    url: 'https://www.microsoft.com/fi-fi/p/deep-rock-galactic/9nhfvwx1v7qj',
+    imageUrl:
+      'https://cdn.cloudflare.steamstatic.com/steam/apps/548430/capsule_616x353.jpg',
+    platforms: ['Xbox', 'Windows Store', 'Steam'],
+    crossPlayPlatforms: ['Xbox', 'Windows Store'],
+    gamePassPlatforms: ['Xbox', 'PC', 'Android Pilvi'],
+    recommendations: [
+      {
+        author: 'Misa',
+        content:
+          'Left 4 Dead tyylinen intensiivinen ja tiukkaa yhteistyötä vaativa mähinä, jossa vaikeustasoa säätämällä saa aina itselleen sopivaa haastetta.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { min: 1, max: 4 },
+  },
+  {
+    title: 'Sea of Thieves',
+    description:
+      'Valtava merirosvohiekkalaatikko, jossa purjehdit jopa neljän kaverin kanssa. Tarraa erilaisiin tehtäviin, maailman jännittäviin haasteisiin, ota mittaa muista pelaajista tai lähde ratkomaan muinaisia mysteerejä. Valinta on sinun!',
+    tags: ['fps', 'pve', 'pvp', 'co-op'],
+    url: 'https://www.microsoft.com/fi-fi/p/sea-of-thieves/9p2n57mc619k',
+    imageUrl:
+      'https://i2.wp.com/caniplaythat.com/wp-content/uploads/2020/06/sea-of-thieves-key-art.jpg?fit=1920%2C1080&ssl=1',
+    platforms: ['Xbox', 'Windows Store', 'Steam'],
+    crossPlayPlatforms: ['Xbox', 'Windows Store', 'Steam'],
+    gamePassPlatforms: ['Xbox', 'PC', 'Android Pilvi'],
+    recommendations: [
+      {
+        author: 'Misa',
+        content:
+          'Monesti lähden merelle ajatuksena vain kalastaa hetki, mutta löydänkin itseni sukeltelemassa ties mistä salaisista vedenalaisista luolista kun purkautuva tulivuori iskee yllä tulikiveä niskaan. 5/5 banaanit syödään kuorineen.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { min: 1, max: 4 },
   },
 ];

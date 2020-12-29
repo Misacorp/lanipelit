@@ -9,6 +9,7 @@ const baseFonts = [
 export default {
   palette: {
     primary: {
+      lightest: '#EFECE1',
       lighter: '#FFCF74',
       light: '#FFC14A',
       main: '#FDB01F',

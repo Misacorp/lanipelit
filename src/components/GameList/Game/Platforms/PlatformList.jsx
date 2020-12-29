@@ -39,6 +39,7 @@ const PlatformListStructure = ({ type, game, className }) => {
 const PlatformList = styled(PlatformListStructure)`
   ul {
     list-style-type: none;
+    padding: 0;
   }
 `;
 
