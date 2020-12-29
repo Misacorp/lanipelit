@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
 
 import GameWrapper from './GameWrapper';
@@ -8,6 +8,7 @@ import Recommendation from './Recommendation/Recommendation';
 import Platforms from './Platforms/Platforms';
 import TagList from './TagList';
 import SmallGame from './SmallGame/SmallGame';
+import ListGame from './ListGame/ListGame';
 
 import GameObject from '../../../types/Game';
 import useStore from '../../../store/useStore';
@@ -15,6 +16,10 @@ import * as gameListViewModes from '../../../constants/gameListViewModes';
 
 const Game = ({ game, className }) => {
   const { gameListView } = useStore();
+
+  if (gameListView === gameListViewModes.LIST) {
+    return <ListGame game={game} />;
+  }
 
   if (gameListView === gameListViewModes.SMALL) {
     return <SmallGame game={game} />;

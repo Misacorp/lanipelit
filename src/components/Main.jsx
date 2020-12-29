@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
 import { Menu, MenuTrigger, ActionButton, Item } from '@adobe/react-spectrum';
 
@@ -87,6 +87,7 @@ const MainStructure = ({ className }) => {
   const viewOptions = [
     { name: 'Suuret kortit', value: gameListViewModes.LARGE },
     { name: 'Pienet kortit', value: gameListViewModes.SMALL },
+    { name: 'Lista', value: gameListViewModes.LIST },
   ];
 
   return (
@@ -148,6 +149,7 @@ const MainStructure = ({ className }) => {
 const Main = styled(MainStructure)`
   text-align: center;
   color: ${({ theme }) => theme.palette.typography.light};
+  min-height: 100vh;
 
   h1 {
     margin: 1rem;
@@ -155,11 +157,9 @@ const Main = styled(MainStructure)`
     padding: 1.5rem 0 0;
   }
 
-  select {
-    margin: 1rem;
-    font-size: 1rem;
-    background-color: ${({ theme }) => theme.palette.primary.lighter};
-    color: ${({ theme }) => theme.palette.typography.dark};
+  button {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
   }
 `;
 

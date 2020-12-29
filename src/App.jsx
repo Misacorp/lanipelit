@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider, defaultTheme } from '@adobe/react-spectrum';
+import { darkTheme, Provider } from '@adobe/react-spectrum';
 import WebFont from 'webfontloader';
 
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components/macro';
 import GlobalStyles from './styles/GlobalStyles';
 import theme from './styles/theme';
 import * as routes from './constants/routes';
@@ -20,7 +20,7 @@ WebFont.load({
 const App = function AppContent() {
   return (
     <StoreContextProvider>
-      <Provider theme={defaultTheme}>
+      <Provider colorScheme="dark" theme={darkTheme}>
         <ThemeProvider theme={theme}>
           <>
             <GlobalStyles />
