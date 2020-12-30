@@ -1,43 +1,38 @@
 import React from 'react';
-import styled, { useTheme } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
 
 import GameWrapper from '../GameWrapper';
-import { ReactComponent as LocalIcon } from '../../../../assets/icons/videogame_asset-24px.svg';
-import { ReactComponent as OnlineIcon } from '../../../../assets/icons/public-24px.svg';
+import PlayerCounts from '../PlayerCounts';
 
 import Game from '../../../../types/Game';
 
 const SmallGameStructure = ({ game, className }) => {
-  const theme = useTheme();
-  const iconColor = theme.palette.typography.light;
-
   return (
-    <GameWrapper className={className}>
-      <h2>{game.title}</h2>
+    <GameWrapper>
+      <div className={className}>
+        <h2>{game.title}</h2>
 
-      <p>{game.tags.join(', ')}</p>
+        <p>{game.tags.join(', ')}</p>
 
-      <p>
-        <span>
-          <LocalIcon fill={iconColor} /> {game.localPlayers.toString()}
-        </span>
+        <PlayerCounts game={game} />
 
-        <span>
-          <OnlineIcon fill={iconColor} />
-          {game.onlinePlayers.toString()}
-        </span>
-      </p>
+        <p>
+          <b>Saatavilla</b>: {game.platforms.join(', ')}
+        </p>
 
-      <p>Saatavilla: {game.platforms.join(', ')}</p>
+        {game.crossPlayPlatforms?.length > 0 && (
+          <p>
+            <b>Cross-play</b>: {game.crossPlayPlatforms.join(', ')}
+          </p>
+        )}
 
-      {game.crossPlayPlatforms?.length > 0 && (
-        <p>Cross-play: {game.crossPlayPlatforms.join(', ')}</p>
-      )}
-
-      {game.gamePassPlatforms?.length > 0 && (
-        <p>Game Passissa: {game.gamePassPlatforms.join(', ')}</p>
-      )}
+        {game.gamePassPlatforms?.length > 0 && (
+          <p>
+            <b>Game Passissa</b>: {game.gamePassPlatforms.join(', ')}
+          </p>
+        )}
+      </div>
     </GameWrapper>
   );
 };
@@ -47,6 +42,27 @@ SmallGameStructure.propTypes = {
   className: PropTypes.string,
 };
 
-const SmallGame = styled(SmallGameStructure)``;
+const SmallGame = styled(SmallGameStructure)`
+  color: ${({ theme }) => theme.palette.typography.dark};
+  background-color: ${({ theme }) => theme.palette.primary.lightest};
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  height: 100%;
+
+  border-style: solid;
+  border-right-width: 7px;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-right-color: #ffc600;
+
+  ${PlayerCounts} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 180px;
+  }
+`;
 
 export default SmallGame;

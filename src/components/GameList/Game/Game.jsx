@@ -9,6 +9,7 @@ import Platforms from './Platforms/Platforms';
 import TagList from './TagList';
 import SmallGame from './SmallGame/SmallGame';
 import ListGame from './ListGame/ListGame';
+import PlayerCounts from './PlayerCounts';
 
 import GameObject from '../../../types/Game';
 import useStore from '../../../store/useStore';
@@ -34,13 +35,7 @@ const Game = ({ game, className }) => {
 
         <hr />
 
-        {game.localPlayers !== null && (
-          <p>Paikallinen moninpeli: {game.localPlayers.toString()}</p>
-        )}
-
-        {game.onlinePlayers !== null && (
-          <p>Verkkomoninpeli: {game.onlinePlayers.toString()}</p>
-        )}
+        <PlayerCounts game={game} long />
 
         <TagList game={game} />
 

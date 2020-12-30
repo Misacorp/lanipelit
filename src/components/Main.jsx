@@ -1,7 +1,13 @@
 import React, { useMemo, useState } from 'react';
 import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
-import { Menu, MenuTrigger, ActionButton, Item } from '@adobe/react-spectrum';
+import {
+  Menu,
+  MenuTrigger,
+  ActionButton,
+  Item,
+  ToggleButton,
+} from '@adobe/react-spectrum';
 
 import GameList from './GameList/GameList';
 
@@ -47,6 +53,9 @@ const MainStructure = ({ className }) => {
   // Tag state
   const [selectedTags, setSelectedTags] = useState(new Set());
 
+  // Game Pass
+  const [gamePassSelected, setGamePassSelected] = React.useState(false);
+
   // Filter games by selected author
   let sortedGames = games;
   sortedGames = sortedGames.filter(game => {
@@ -75,6 +84,13 @@ const MainStructure = ({ className }) => {
     // The game must have all selected tags
     return Array.from(selectedTags).every(tag => gameTags.includes(tag));
   });
+
+  // Filter games by Game Pass
+  if (gamePassSelected) {
+    sortedGames = sortedGames.filter(
+      game => game.gamePassPlatforms?.length > 0,
+    );
+  }
 
   // Sort games alphabetically
   sortedGames = sortedGames.sort((a, b) => {
@@ -140,6 +156,14 @@ const MainStructure = ({ className }) => {
           ))}
         </Menu>
       </MenuTrigger>
+
+      <ToggleButton
+        isEmphasized
+        isSelected={gamePassSelected}
+        onChange={setGamePassSelected}
+      >
+        Game Pass
+      </ToggleButton>
 
       <GameList games={sortedGames} />
     </div>

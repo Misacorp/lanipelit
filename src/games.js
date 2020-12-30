@@ -236,7 +236,7 @@ export default [
     gamePassPlatforms: ['Xbox', 'PC', 'Android Pilvi'],
     recommendations: [
       {
-        author: 'Misa',
+        author: 'MIsa',
         content:
           'Left 4 Dead tyylinen intensiivinen ja tiukkaa yhteistyötä vaativa mähinä, jossa vaikeustasoa säätämällä saa aina itselleen sopivaa haastetta.',
       },
@@ -260,6 +260,26 @@ export default [
         author: 'Misa',
         content:
           'Monesti lähden merelle ajatuksena vain kalastaa hetki, mutta löydänkin itseni sukeltelemassa ties mistä salaisista vedenalaisista luolista kun purkautuva tulivuori iskee yllä tulikiveä niskaan. 5/5 banaanit syödään kuorineen.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { min: 1, max: 4 },
+  },
+  {
+    title: 'Monster Hunter World',
+    description:
+      'Oletko haaveillut hirviön metsästyksestä? Tässä on oiva ratkaisu siihen! Pelissä metsästetään suuria petoja ja kerätään niistä harvinaisia osia, joilla varustaudutaan vaikeimpia petoja vastaan! Yksilölliset asevaihtoehdot ja niiden pelityylit, joista jokaiselle löytyy omansa! Yhdessä hauskempaa',
+    tags: ['rpg', 'pve', 'co-op'],
+    url: 'https://store.steampowered.com/app/582010/Monster_Hunter_World/',
+    imageUrl:
+      'https://cdn.cloudflare.steamstatic.com/steam/apps/582010/header.jpg?t=1602806745',
+    platforms: ['Xbox', 'Steam'],
+    gamePassPlatforms: ['Xbox'],
+    recommendations: [
+      {
+        author: 'Ossi',
+        content:
+          'Peli tarjoaa sopivaa haastetta ja onnistumisen tunnetta jokaisella jahdilla. Onnistumiset palkitaan etenevällä, monivalintaisella, itemillä ja niistä voit kehittää itsellesi mielekkään pelityylin. Avara maailma ja paljon sivutekemistä jahtien ohella.',
       },
     ],
     localPlayers: { min: 1, max: 1 },

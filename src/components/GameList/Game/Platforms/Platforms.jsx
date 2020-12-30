@@ -10,7 +10,8 @@ const PlatformsStructure = ({ game, className }) => {
   return (
     <div className={className}>
       <PlatformList type="AVAILABLE" game={game} />
-      <PlatformList type="CROSS-PLAY" game={game} />
+      <PlatformList type="CROSS_PLAY" game={game} />
+      <PlatformList type="GAME_PASS" game={game} />
     </div>
   );
 };
