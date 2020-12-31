@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/lanipelit/static/js/main.57901457.chunk.js",
-    "main.js.map": "/lanipelit/static/js/main.57901457.chunk.js.map",
+    "main.js": "/lanipelit/static/js/main.7c7122e2.chunk.js",
+    "main.js.map": "/lanipelit/static/js/main.7c7122e2.chunk.js.map",
     "runtime-main.js": "/lanipelit/static/js/runtime-main.b52d7c8d.js",
     "runtime-main.js.map": "/lanipelit/static/js/runtime-main.b52d7c8d.js.map",
     "static/css/2.6feebad1.chunk.css": "/lanipelit/static/css/2.6feebad1.chunk.css",
-    "static/js/2.4b552f98.chunk.js": "/lanipelit/static/js/2.4b552f98.chunk.js",
-    "static/js/2.4b552f98.chunk.js.map": "/lanipelit/static/js/2.4b552f98.chunk.js.map",
+    "static/js/2.d0c52708.chunk.js": "/lanipelit/static/js/2.d0c52708.chunk.js",
+    "static/js/2.d0c52708.chunk.js.map": "/lanipelit/static/js/2.d0c52708.chunk.js.map",
     "index.html": "/lanipelit/index.html",
     "static/css/2.6feebad1.chunk.css.map": "/lanipelit/static/css/2.6feebad1.chunk.css.map",
-    "static/js/2.4b552f98.chunk.js.LICENSE.txt": "/lanipelit/static/js/2.4b552f98.chunk.js.LICENSE.txt",
+    "static/js/2.d0c52708.chunk.js.LICENSE.txt": "/lanipelit/static/js/2.d0c52708.chunk.js.LICENSE.txt",
     "static/media/public-24px.97de4c71.svg": "/lanipelit/static/media/public-24px.97de4c71.svg",
     "static/media/videogame_asset-24px.636a14ba.svg": "/lanipelit/static/media/videogame_asset-24px.636a14ba.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b52d7c8d.js",
     "static/css/2.6feebad1.chunk.css",
-    "static/js/2.4b552f98.chunk.js",
-    "static/js/main.57901457.chunk.js"
+    "static/js/2.d0c52708.chunk.js",
+    "static/js/main.7c7122e2.chunk.js"
   ]
 }
