@@ -11,12 +11,11 @@ import {
 
 import GameList from './GameList/GameList';
 
-import gamesRaw from '../games';
-import Game from '../types/Game';
+import getGameList from '../util/getGameList';
 import useStore from '../store/useStore';
 import * as gameListViewModes from '../constants/gameListViewModes';
 
-const games = gamesRaw.map(g => new Game(g));
+const games = getGameList();
 
 /**
  * Main app content

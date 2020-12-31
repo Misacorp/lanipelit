@@ -6,12 +6,15 @@ import GameWrapper from '../GameWrapper';
 import PlayerCounts from '../PlayerCounts';
 
 import Game from '../../../../types/Game';
+import GameImage from '../GameImage';
 
 const SmallGameStructure = ({ game, className }) => {
   return (
     <GameWrapper>
       <div className={className}>
         <h2>{game.title}</h2>
+
+        <GameImage url={game.imageUrl} />
 
         <p>{game.tags.join(', ')}</p>
 

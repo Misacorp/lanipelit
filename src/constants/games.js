@@ -19,11 +19,6 @@ export default [
         content:
           'Mistään pelistä ei löydy näin montaa pelimuotoa! Kuuden pelin kampanjat, kahden pelin Firefightit ja viiden pelin moninpelit kaikki samassa paketissa. Pelaa lipunryöstöä, Grifballia, King of the Hillia, rallia ja ties mitä muuta jopa 16 pelaajan voimin.',
       },
-      {
-        author: 'Ossi',
-        content:
-          'Toimii kilpailullisena, hauskana hupsutteluna, isolla ja pienellä porukalla. Crossplay löytyy ja kuuluu Gamepassiin.',
-      },
     ],
     localPlayers: { min: 1, max: 4 },
     onlinePlayers: { min: 1, max: 16 },
@@ -99,7 +94,7 @@ export default [
       'https://play-lh.googleusercontent.com/bW71VrpnDqzGg0HS-_E-LPFFYggr7Ui47c9uNHgLT8D2E1TZq7Gm7Evj8VYJ8rQOafc',
     platforms: ['Xbox', 'Windows Store', 'Play Store'],
     crossPlayPlatforms: ['Xbox', 'Windows Store', 'Play Store'],
-    gamePassPlatforms: ['Xbox', 'PC'],
+    gamePassPlatforms: ['Xbox'],
     recommendations: [
       {
         author: 'Joona',
@@ -135,7 +130,7 @@ export default [
     title: 'Of Guards and Thieves',
     description:
       'Ylhäältä päin kuvattua 2D-hiippailuräiskintää. Poliisit vs. varkaat. Paljon erilaisia fps-genren pelimuotoja.',
-    tags: ['pvp', 'co-op', 'f2p'],
+    tags: ['pvp', 'f2p'],
     url: 'https://store.steampowered.com/app/302590/Of_Guards_And_Thieves/',
     imageUrl: 'https://i.ytimg.com/vi/R_D9kaDXotI/maxresdefault.jpg',
     platforms: ['Steam'],
@@ -236,7 +231,7 @@ export default [
     gamePassPlatforms: ['Xbox', 'PC', 'Android Pilvi'],
     recommendations: [
       {
-        author: 'MIsa',
+        author: 'Misa',
         content:
           'Left 4 Dead tyylinen intensiivinen ja tiukkaa yhteistyötä vaativa mähinä, jossa vaikeustasoa säätämällä saa aina itselleen sopivaa haastetta.',
       },
@@ -284,5 +279,140 @@ export default [
     ],
     localPlayers: { min: 1, max: 1 },
     onlinePlayers: { min: 1, max: 4 },
+  },
+  {
+    title: 'Maelstrom',
+    description:
+      'third-person-ship-shooter-battle-royal. Seilataan hirviöiden ja laivojen täyttämällä merellä keräten parannuksia ja yrittäen selvitä viimeiseksi kutistuvassa myrskynsilmässä.',
+    tags: ['pve', 'pvp', 'f2p'],
+    url: 'https://store.steampowered.com/app/764050/Maelstrom/',
+    imageUrl:
+      'https://cdn.cloudflare.steamstatic.com/steam/apps/764050/ss_181845fc1b55db961b3cd776dd3f2dfc87db1cc9.1920x1080.jpg?t=1606855761',
+    platforms: ['Steam'],
+    crossPlayPlatforms: ['Steam'],
+    recommendations: [
+      {
+        author: 'Joona',
+        content:
+          'Ilmainen laivataistelu battle royal, jossa pääsee seilaamaan ihmisten purjelaivojen lisäksi myös kääpiöiden höyryveneillä tai örkkien muurinmurtajalaivoilla.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { min: 1, max: 16 },
+  },
+  {
+    title: 'Overwatch',
+    description:
+      'Luokkapohjainen intensiivinen tiimipeli, jossa yli 20 erilaista sankaria taistelee monipuolisissa pelimuodoissa.',
+    tags: ['fps', 'pvp'],
+    url: 'https://playoverwatch.com/en-us/',
+    imageUrl:
+      'https://www.gannett-cdn.com/-mm-/9a10d18443197ab9a2a837953a60ea6375b5467c/c=4-0-1916-1080/local/-/media/2016/06/01/USATODAY/USATODAY/636003815997383719-XBoxOne-1P-PAX16-TRACER-png-jpgcopy.jpg',
+    platforms: ['Xbox', 'Battle.net'],
+    recommendations: [
+      {
+        author: 'Misa',
+        content:
+          'Todella monipuoliset hahmot ja intensiivinen tiimityöskentely tekevät tästä uuden sukupolven Team Fortress 2:n.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { min: 2, max: 12 },
+  },
+  {
+    title: 'Forza Horizon 4',
+    description:
+      'Päristele pitkin Britannian asfaltteja, hiekkateitä ja peltoja tässä avoimen maailman autopelissä. Kisaa kavereitasi vastaan sadoissa valmiissa kilpareiteissä tai luo omasti.',
+    tags: ['racing'],
+    url: 'https://www.xbox.com/en-us/games/forza-horizon-4',
+    imageUrl:
+      'https://compass-ssl.xbox.com/assets/c4/d4/c4d49717-764b-40b5-8e6f-813db6937e73.jpg?n=FH4_Gallery-0_1350x759_05.jpg',
+    platforms: ['Xbox', 'Windows Store'],
+    crossPlayPlatforms: ['Xbox', 'Windows Store'],
+    gamePassPlatforms: ['Xbox', 'PC', 'Android Pilvi'],
+    recommendations: [
+      {
+        author: 'Misa',
+        content:
+          'Niin monipuolista ja hauskaa ajelua! Driftaa koko kartan ympäri, kisaa möykkyisillä hiekkateillä tai etsi suurimman ilmalennon tarjoava hyppyri. Tässä pelissä on jokaiselle jotain.',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { min: 1, max: 12 },
+  },
+  {
+    title: 'Golf With Your Friends',
+    description:
+      'Vapaamuotoista minigolfia, jota pelataan yhtä aikaa jopa 12 kaverin kanssa. Sabotoi kavereita huvin vuoksi!',
+    tags: ['pvp'],
+    url:
+      'https://www.microsoft.com/fi-fi/p/golf-with-your-friends/9n14g09pwg74?activetab=pivot:overviewtab',
+    imageUrl:
+      'https://media.altchar.com/prod/images/940_530/gm-a8eaaf3c-acb7-4e51-af86-488667d66c27-golf-with-your-friends.jpg',
+    platforms: ['Xbox', 'Windows Store', 'Steam'],
+    gamePassPlatforms: ['Xbox'],
+    recommendations: [
+      {
+        author: 'Misa',
+        content:
+          'En ole vielä pelannut, mutta vaikuttaa säännöiltään todella vapaamuotoiselta ja hauskalta!',
+      },
+    ],
+    localPlayers: { min: 2, max: 12 },
+    onlinePlayers: { min: 2, max: 12 },
+  },
+  {
+    title: 'Rocket League',
+    description: 'Balls and cars',
+    tags: ['pvp', 'f2p'],
+    url: 'epicgames.com/store/en-US/product/rocket-league/home',
+    platforms: ['Xbox', 'Steam', 'Epic Store'],
+    crossPlayPlatforms: ['Xbox', 'Steam', 'Epic Store'],
+    recommendations: [{ author: 'Jesse' }],
+    localPlayers: { min: 1, max: 4 },
+    onlinePlayers: { min: 1, max: 8 },
+  },
+  {
+    title: 'Rainbow Six Siege',
+    description:
+      'Tehtäväpainotteinen hyökkääjät vs puolustajat FPS, jossa tuhoutuvia elementtejä ja eri hahmokykyjä.',
+    tags: ['fps', 'pvp'],
+    url: 'https://www.xbox.com/fi-FI/games/rainbow-six-siege',
+    imageUrl:
+      'https://compass-ssl.xbox.com/assets/df/1a/df1adb3c-fc53-4ca0-90ae-4a0f43d9b907.jpg?n=RSS-MWF_GLP-Page-Hero-0_1083x609_04.jpg',
+    platforms: ['Xbox', 'Steam'],
+    crossPlayPlatforms: ['Xbox', 'Steam'],
+    gamePassPlatforms: ['Xbox'],
+    recommendations: [
+      {
+        author: 'Ossi',
+        content:
+          'Taktinen ja tiivistunnelmallinen FPS. Koskaan ei tiedä mitä tapahtuu ja tarjolla kovia clutcheja. Tiimityöskentelyn helmi',
+      },
+    ],
+    localPlayers: { min: 1, max: 1 },
+    onlinePlayers: { min: 8, max: 10 },
+  },
+  {
+    title: 'Gears 5',
+    description:
+      'Olan yli kuvattu räiskintä, jossa liikutaan suojasta toiseen. Tiukassa moninpelissä on kolme moodia: versus, horde ja escape. Taistele kavereita vastaan, selviä mahdollisimman pitkään loputtomassta pahisten hyökkäyksestä tai pakene niiden pesästä ennen kuin asettamasi pommi räjähtää.',
+    tags: ['pve', 'pvp', 'co-op', '3ps'],
+    url:
+      'https://www.microsoft.com/en-us/p/gears-5/c2kdnlt2h7dm?activetab=pivot:overviewtab',
+    imageUrl:
+      'https://muropaketti.com/wp-content/uploads/2019/06/gears-5-006.jpg',
+    platforms: ['Xbox', 'Windows Store', 'Steam'],
+    crossPlayPlatforms: ['Xbox', 'Windows Store', 'Steam'],
+    gamePassPlatforms: ['Xbox', 'PC', 'Android Pilvi'],
+    recommendations: [
+      {
+        author: 'Misa',
+        content:
+          'Nätti peli täynnä näpäkkää mähinää ja viihdyttäviä hieman harvinaisempia pelimuotoja.',
+      },
+    ],
+    localPlayers: { min: 1, max: 3 },
+    onlinePlayers: { min: 1, max: 10 },
   },
 ];
