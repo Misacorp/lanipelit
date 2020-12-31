@@ -40,7 +40,7 @@ export default {
       fontFamily: baseFonts.join(','),
     },
     title: {
-      fontFamily: ['Vollkorn', ...baseFonts].join(','),
+      fontFamily: [...baseFonts].join(','),
     },
   },
 };
