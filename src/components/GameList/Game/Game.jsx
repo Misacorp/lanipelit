@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
+import { ActionButton } from '@adobe/react-spectrum';
 
 import GameWrapper from './GameWrapper';
 import GameImage from './GameImage';
@@ -15,8 +16,18 @@ import GameObject from '../../../types/Game';
 import useStore from '../../../store/useStore';
 import * as gameListViewModes from '../../../constants/gameListViewModes';
 
-const Game = ({ game, className }) => {
+const LOL = true;
+
+const Game = ({ game, setSelectedGame, className }) => {
   const { gameListView } = useStore();
+
+  if (LOL) {
+    return (
+      <ActionButton onPress={() => setSelectedGame(game)} className={className}>
+        {game.title}
+      </ActionButton>
+    );
+  }
 
   if (gameListView === gameListViewModes.LIST) {
     return <ListGame game={game} />;
@@ -60,6 +71,7 @@ const Game = ({ game, className }) => {
 
 Game.propTypes = {
   game: PropTypes.instanceOf(GameObject).isRequired,
+  setSelectedGame: PropTypes.func,
   className: PropTypes.string,
 };
 
