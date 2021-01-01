@@ -22,14 +22,15 @@ const translateType = (game, type) => {
 const PlatformListStructure = ({ type, game, className }) => {
   const { title, platforms } = translateType(game, type);
 
-  if (!platforms) return null;
+  let displayedPlatforms = platforms;
+  if (!platforms) displayedPlatforms = ['-'];
 
   return (
     <div className={className}>
       <h3>{title}</h3>
 
       <ul>
-        {platforms.map(p => (
+        {displayedPlatforms.map(p => (
           <li key={p}>{p}</li>
         ))}
       </ul>

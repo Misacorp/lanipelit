@@ -16,7 +16,7 @@ import Game from '../../../types/Game';
  */
 const PlayerCountsStructure = ({ game, long, className }) => {
   const theme = useTheme();
-  const iconColor = theme.palette.typography.dark;
+  const iconColor = theme.palette.typography.light;
 
   return (
     <div className={className}>
@@ -42,7 +42,7 @@ PlayerCountsStructure.propTypes = {
 
 const PlayerCounts = styled(PlayerCountsStructure)`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   & > div {
     display: inline-flex;
@@ -51,7 +51,8 @@ const PlayerCounts = styled(PlayerCountsStructure)`
     text-align: center;
     align-items: center;
     padding: 0.25rem 0.5rem;
-    border: 1px solid ${({ theme }) => theme.palette.typography.dark};
+    border: 1px solid #aaaaaa;
+    border-radius: 2rem;
 
     p {
       flex-basis: 100%;

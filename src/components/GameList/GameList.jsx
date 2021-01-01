@@ -5,6 +5,7 @@ import { DialogTrigger } from '@adobe/react-spectrum';
 
 import Game from './Game/Game';
 import GameDialog from './GameDialog';
+import breakpoints from '../../styles/breakpoints';
 
 /**
  * Displays multiple recommendations in a list.
@@ -77,16 +78,19 @@ GameList.propTypes = {
 export default styled(GameList)`
   box-sizing: border-box;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
-  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
   padding: 0.5rem;
 
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1rem auto;
   max-width: 1400px;
+
+  @media ${breakpoints.m} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${breakpoints.l} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;

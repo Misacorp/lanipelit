@@ -11,13 +11,28 @@ import {
   Flex,
   Divider,
   Meter,
+  Grid,
+  Text,
 } from '@adobe/react-spectrum';
 import ChevronLeft from '@spectrum-icons/workflow/ChevronLeft';
 import ChevronRight from '@spectrum-icons/workflow/ChevronRight';
 
-import Game from '../../types/Game';
 import PlayerCounts from './Game/PlayerCounts';
+import PlatformList from './Game/Platforms/PlatformList';
+import Recommendations from './Game/Recommendations/Recommendations';
 
+import Game from '../../types/Game';
+
+/**
+ * Displays more detailed information about a game.
+ * @param game
+ * @param prevGame
+ * @param nextGame
+ * @param index
+ * @param max
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const GameDialog = ({ game, prevGame, nextGame, index, max }) => {
   const isFirst = index === 0;
   const isLast = index === max;
@@ -29,7 +44,7 @@ const GameDialog = ({ game, prevGame, nextGame, index, max }) => {
         alt={`Kuva pelistä ${game.title}`}
         src={game.imageUrl}
         objectFit="cover"
-        minHeight={300}
+        minHeight={200}
       />
 
       <Heading>{game.title}</Heading>
@@ -39,19 +54,40 @@ const GameDialog = ({ game, prevGame, nextGame, index, max }) => {
 
         <Divider size="S" marginBottom="1rem" />
 
-        <PlayerCounts game={game} />
+        <Flex justifyContent="space-between">
+          <PlayerCounts game={game} />
+
+          <Text color="notice">{game.tags.join(', ')}</Text>
+        </Flex>
+
+        <Grid columns={['1fr', '1fr', '1fr']} gap="1rem">
+          <PlatformList game={game} type="AVAILABLE" />
+          <PlatformList game={game} type="CROSS_PLAY" />
+          <PlatformList game={game} type="GAME_PASS" />
+        </Grid>
+
+        <Recommendations game={game} />
       </Content>
 
       <Footer>
-        <Flex direction="row" justifyContent="space-between" width="100%">
+        <Flex
+          direction="row"
+          justifyContent="space-between"
+          width="100%"
+          wrap="wrap"
+        >
           <Meter
             label="Pelit"
             value={((index + 1) / max) * 100}
             valueLabel={`${index + 1} / ${max}`}
             variant="positive"
+            flexShrink={1}
+            marginStart="auto"
+            marginEnd="auto"
+            marginBottom="0.5rem"
           />
 
-          <ButtonGroup>
+          <ButtonGroup marginStart="auto" marginEnd="auto">
             <Button onPress={prevGame} variant="primary" isQuiet>
               <ChevronLeft />
               {isFirst ? 'Loppuun' : 'Edellinen'}

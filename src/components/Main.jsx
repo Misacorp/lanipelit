@@ -18,6 +18,7 @@ import useAuthorFilter from './GameList/filters/useAuthorFilter';
 import useTagFilter from './GameList/filters/useTagFilter';
 
 const games = getGameList();
+const DISPLAY_VIEW_MODE_SELECT = false;
 
 /**
  * Main app content
@@ -75,16 +76,18 @@ const MainStructure = ({ className }) => {
       <h1>Lanipelit</h1>
       <p>Selaa laneilla pelattavaksi ehdotettuja pelejä ja löydä suosikkisi!</p>
 
-      <MenuTrigger closeOnSelect>
-        <ActionButton>
-          {viewOptions.find(o => o.value === gameListView).name}
-        </ActionButton>
-        <Menu onAction={setGameListView}>
-          {viewOptions.map(viewMode => (
-            <Item key={viewMode.value}>{viewMode.name}</Item>
-          ))}
-        </Menu>
-      </MenuTrigger>
+      {DISPLAY_VIEW_MODE_SELECT && (
+        <MenuTrigger closeOnSelect visibility="hidden">
+          <ActionButton>
+            {viewOptions.find(o => o.value === gameListView).name}
+          </ActionButton>
+          <Menu onAction={setGameListView}>
+            {viewOptions.map(viewMode => (
+              <Item key={viewMode.value}>{viewMode.name}</Item>
+            ))}
+          </Menu>
+        </MenuTrigger>
+      )}
 
       <MenuTrigger closeOnSelect={false}>
         <ActionButton>

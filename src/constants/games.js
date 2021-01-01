@@ -92,9 +92,9 @@ export default [
       'https://www.microsoft.com/fi-fi/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab',
     imageUrl:
       'https://play-lh.googleusercontent.com/bW71VrpnDqzGg0HS-_E-LPFFYggr7Ui47c9uNHgLT8D2E1TZq7Gm7Evj8VYJ8rQOafc',
-    platforms: ['Xbox', 'Windows Store', 'Play Store'],
-    crossPlayPlatforms: ['Xbox', 'Windows Store', 'Play Store'],
-    gamePassPlatforms: ['Xbox'],
+    platforms: ['Xbox', 'Windows Store', 'Play Store', 'App Store'],
+    crossPlayPlatforms: ['Xbox', 'Windows Store', 'Play Store', 'App Store'],
+    gamePassPlatforms: ['Xbox', 'Android Pilvi'],
     recommendations: [
       {
         author: 'Joona',
@@ -102,8 +102,8 @@ export default [
           'Mielikuvituksella ei ole rajoja, sillä Minecraftisa voi tehdä eri värisistä kuutioista mitä vain ja kuolla monta kertaa pudotessaan korkealta rakennelmiaan rakentaessa. Ja kuulemma peliä voi pelata vielä lohikäärmeen päihittämisen jälkeenkin - huhujen mukaan tämä avaa mahdollisuuden jopa lentämiseen!!!',
       },
     ],
-    localPlayers: { min: 1, max: 2 },
-    onlinePlayers: { min: 1, max: 8 },
+    localPlayers: { min: 1, max: 4 },
+    onlinePlayers: { min: 1, max: 16 },
   },
   {
     title: 'Among Us',
@@ -134,7 +134,6 @@ export default [
     url: 'https://store.steampowered.com/app/302590/Of_Guards_And_Thieves/',
     imageUrl: 'https://i.ytimg.com/vi/R_D9kaDXotI/maxresdefault.jpg',
     platforms: ['Steam'],
-    crossPlayPlatforms: ['Steam'],
     recommendations: [
       {
         author: 'Joona',
@@ -154,7 +153,6 @@ export default [
     imageUrl:
       'https://cdn.cloudflare.steamstatic.com/steam/apps/774861/capsule_616x353.jpg?t=1608139018',
     platforms: ['Steam'],
-    crossPlayPlatforms: ['Steam'],
     recommendations: [
       {
         author: 'Joona',
@@ -172,6 +170,8 @@ export default [
     tags: ['pvp', 'rts'],
     url:
       'https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition/',
+    imageUrl:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThm7Nf7rExKXGhW7Q1PZ3-GaLDsoQ3VS5Gsg&usqp=CAU',
     platforms: ['Windows Store', 'Steam'],
     gamePassPlatforms: ['PC'],
     recommendations: [
@@ -213,7 +213,6 @@ export default [
     imageUrl:
       'https://steamcdn-a.akamaihd.net/steam/apps/440/header.jpg?t=1592263852',
     platforms: ['Steam'],
-    crossPlayPlatforms: ['Steam'],
     recommendations: [{}],
     localPlayers: { min: 1, max: 1 },
     onlinePlayers: { min: 1, max: 32 },
@@ -289,7 +288,6 @@ export default [
     imageUrl:
       'https://cdn.cloudflare.steamstatic.com/steam/apps/764050/ss_181845fc1b55db961b3cd776dd3f2dfc87db1cc9.1920x1080.jpg?t=1606855761',
     platforms: ['Steam'],
-    crossPlayPlatforms: ['Steam'],
     recommendations: [
       {
         author: 'Joona',
@@ -304,7 +302,7 @@ export default [
     title: 'Overwatch',
     description:
       'Luokkapohjainen intensiivinen tiimipeli, jossa yli 20 erilaista sankaria taistelee monipuolisissa pelimuodoissa.',
-    tags: ['fps', 'pvp'],
+    tags: ['fps', 'pvp', 'f2p'],
     url: 'https://playoverwatch.com/en-us/',
     imageUrl:
       'https://www.gannett-cdn.com/-mm-/9a10d18443197ab9a2a837953a60ea6375b5467c/c=4-0-1916-1080/local/-/media/2016/06/01/USATODAY/USATODAY/636003815997383719-XBoxOne-1P-PAX16-TRACER-png-jpgcopy.jpg',
@@ -366,6 +364,8 @@ export default [
     description: 'Balls and cars',
     tags: ['pvp', 'f2p'],
     url: 'epicgames.com/store/en-US/product/rocket-league/home',
+    imageUrl:
+      'https://rocketleague.media.zestyio.com/rl_cross-play_asset_rl_1920.309bf22bd29c2e411e9dd8eb07575bb1.jpg',
     platforms: ['Xbox', 'Steam', 'Epic Store'],
     crossPlayPlatforms: ['Xbox', 'Steam', 'Epic Store'],
     recommendations: [{ author: 'Jesse' }],
@@ -381,7 +381,6 @@ export default [
     imageUrl:
       'https://compass-ssl.xbox.com/assets/df/1a/df1adb3c-fc53-4ca0-90ae-4a0f43d9b907.jpg?n=RSS-MWF_GLP-Page-Hero-0_1083x609_04.jpg',
     platforms: ['Xbox', 'Steam'],
-    crossPlayPlatforms: ['Xbox', 'Steam'],
     gamePassPlatforms: ['Xbox'],
     recommendations: [
       {
